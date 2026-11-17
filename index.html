@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="CrowdHub — платформа, где компании публикуют реальные задачи, а студенты набирают опыт и получают CT за лучший результат." name="description"/>
+<title>CrowdHub — реальные рабочие задачи</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="style.css" rel="stylesheet"/>
+</head>
+<body data-page="home">
+<div class="liquid-orb orb-one"></div>
+<div class="liquid-orb orb-two"></div>
+<div class="liquid-orb orb-three"></div>
+<div id="siteHeader"></div>
+<main class="market-home">
+<section class="home-companies-section">
+  <div class="container">
+    <div class="market-intro-row companies-intro-row">
+      <div>
+        <span class="section-caption">КОМПАНИИ</span>
+        <h1>Популярные компании</h1>
+        <p>Команды, чьи задачи чаще сохраняют и решают на CrowdHub. Листай подборку и переходи сразу к заданиям выбранной компании.</p>
+      </div>
+      <div class="company-carousel-actions" aria-label="Навигация по компаниям">
+        <button class="carousel-arrow" id="companiesPrev" type="button" aria-label="Предыдущие компании">←</button>
+        <button class="carousel-arrow" id="companiesNext" type="button" aria-label="Следующие компании">→</button>
+      </div>
+    </div>
+    <div class="popular-companies-wrap">
+      <div class="popular-companies-track" id="popularCompanies"></div>
+    </div>
+  </div>
+</section>
+<section class="home-top-tasks-section">
+  <div class="container">
+    <div class="section-title home-catalog-title">
+      <div>
+        <span class="section-caption">ТОП ЗАДАЧ</span>
+        <h2>Топовые задачи</h2>
+        <p class="section-description">Задачи с высоким интересом исполнителей, понятным результатом и актуальным вознаграждением.</p>
+      </div>
+      <a class="btn btn-glass btn-compact" href="orders.html">Весь каталог</a>
+    </div>
+    <div class="glass catalog-controls home-catalog-controls">
+      <div class="catalog-search"><svg viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"></path></svg><input id="homeOrdersSearch" placeholder="Поиск по заданиям..." type="text"></div>
+      <select id="homeOrdersCategory"><option value="all">Все категории</option><option value="Разработка">Разработка</option><option value="Дизайн">Дизайн</option><option value="Маркетинг">Маркетинг</option><option value="Аналитика">Аналитика</option><option value="Контент">Контент</option></select>
+      <select id="homeOrdersCompany"><option value="all">Все компании</option></select>
+      <select id="homeOrdersStatus"><option value="all">Все статусы</option><option value="open">Открытые</option><option value="in_review">Есть решения</option><option value="paid">Завершённые</option></select>
+      <select id="homeOrdersSort"><option value="popular">Сначала популярные</option><option value="newest">Сначала новые</option><option value="price_desc">Награда: выше</option><option value="price_asc">Награда: ниже</option></select>
+    </div>
+    <div class="catalog-meta">Найдено: <strong id="homeOrdersCount">0</strong></div>
+    <div class="orders-grid" id="homeCatalogGrid"></div>
+    <div class="glass empty-state" id="homeOrdersEmpty"><strong>Ничего не найдено</strong><span>Попробуй изменить фильтры.</span></div>
+    <div class="home-more-wrap"><a class="btn btn-primary" href="orders.html">Открыть весь каталог</a></div>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-inner"><strong>CrowdHub</strong><span>Расти, решая реальные задачи.</span></div></footer>
+<div class="toast-container" id="toastContainer"></div>
+<script defer src="js/storage.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/notifications.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/chat.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/company.js"></script>
+  <script defer src="js/favorites.js"></script>
+  <script defer src="js/forms.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

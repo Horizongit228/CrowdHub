@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Создать задачу — CrowdHub</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="style.css" rel="stylesheet"/></head>
+<body data-page="create-order"><div class="liquid-orb orb-one"></div><div class="liquid-orb orb-two"></div><div id="siteHeader"></div>
+<main class="page-main"><div class="container"><div class="catalog-heading"><div><span class="section-caption">НОВАЯ ЗАДАЧА</span><h1>Разместить задачу</h1><p>Средства резервируются сразу после публикации.</p></div></div>
+<div class="create-layout">
+<section class="glass create-card" id="createOrderRoot"><form id="createOrderForm"><label class="form-field"><span>Название</span><input id="newOrderTitle" placeholder="Например: разработать лендинг" required="" type="text"/></label><div class="two-fields"><label class="form-field"><span>Категория</span><select id="newOrderCategory"><option>Разработка</option><option>Дизайн</option><option>Маркетинг</option><option>Аналитика</option><option>Контент</option></select></label><label class="form-field"><span>Вознаграждение</span><input id="newOrderPrice" min="100" placeholder="15000" required="" type="number"/></label></div><label class="form-field"><span>Описание задачи</span><textarea id="newOrderDescription" placeholder="Что нужно сделать? Каким должен быть результат?" required=""></textarea></label><label class="form-field"><span>Навыки</span><input id="newOrderSkills" placeholder="HTML, CSS, JavaScript" type="text"/></label><div class="security-banner"><div class="security-icon">!</div><div><strong>Правило отмены</strong><p>Ты сможешь отменить задачу и вернуть средства только пока ни один исполнитель не отправил результат.</p></div></div><button class="btn btn-primary btn-full">Оплатить и опубликовать</button></form></section>
+<aside class="glass live-preview-card"><span class="section-caption">ПРЕДПРОСМОТР</span><h2>Предпросмотр карточки</h2><div id="orderLivePreview"></div><div class="budget-advisor"><span>Рекомендуемый бюджет</span><strong id="budgetAdvice"><span class="ct-amount"><span class="ct-coin">CT</span><span class="ct-number">8 000–15 000</span></span></strong><p id="walletPreview">Баланс: —</p></div></aside>
+</div>
+</div></main><div class="toast-container" id="toastContainer"></div><script defer src="js/storage.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/notifications.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/chat.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/company.js"></script>
+  <script defer src="js/favorites.js"></script>
+  <script defer src="js/forms.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

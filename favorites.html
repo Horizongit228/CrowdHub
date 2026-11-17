@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Избранные задачи — CrowdHub" name="description"/>
+<title>Избранное — CrowdHub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="style.css" rel="stylesheet"/>
+</head>
+<body data-page="favorites">
+<div class="liquid-orb orb-one"></div>
+<div class="liquid-orb orb-three"></div>
+<div id="siteHeader"></div>
+<main class="page-main">
+<div class="container">
+<div class="catalog-heading">
+<div>
+<span class="section-caption">СОХРАНЁННЫЕ ЗАДАЧИ</span>
+<h1>Избранное</h1>
+<p>Сохраняй интересные задачи, чтобы вернуться к ним позже.</p>
+</div>
+<a class="btn btn-primary" href="orders.html">Найти ещё задачи</a>
+</div>
+<section class="glass favorites-summary" id="favoritesSummary">
+<div>
+<span class="section-caption">ТВОЯ ПОДБОРКА</span>
+<strong id="favoritesCount">0 сохранённых задач</strong>
+</div>
+<p>Избранное хранится в профиле этого браузера и синхронизируется с карточками задач.</p>
+</section>
+<div class="orders-grid" id="favoritesGrid"></div>
+<div class="glass empty-state" id="favoritesEmpty">
+<strong>Избранное пока пустое</strong>
+<span>Открой каталог и нажми ♡ у понравившейся задачи.</span>
+<a class="btn btn-primary" href="orders.html">Перейти к задачам</a>
+</div>
+</div>
+</main>
+<div class="toast-container" id="toastContainer"></div>
+<script defer src="js/storage.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/notifications.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/chat.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/company.js"></script>
+  <script defer src="js/favorites.js"></script>
+  <script defer src="js/forms.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Задача — CrowdHub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="style.css" rel="stylesheet"/>
+</head>
+<body data-page="order">
+<div class="liquid-orb orb-one"></div><div class="liquid-orb orb-three"></div>
+<div id="siteHeader"></div>
+<main class="page-main"><div class="container"><a class="back-link" href="orders.html">← Вернуться к задачам</a><div id="orderPageRoot"></div></div></main>
+<div class="modal-overlay" id="submissionModal"><div class="glass modal-card"><button class="modal-close" data-modal-close="">×</button><span class="section-caption">ОТПРАВКА РЕШЕНИЯ</span><h2>Отправить решение</h2><p class="modal-description">После первой отправки результата заказ больше нельзя отменить.</p><form id="submissionForm"><label class="form-field"><span>Ссылка на GitHub / результат</span><input id="solutionLink" placeholder="https://github.com/..." type="url"/></label><div class="submission-or"><span>или</span></div><label class="solution-file-drop"><input id="solutionZip" accept=".zip,application/zip,application/x-zip-compressed" type="file"/><span class="solution-file-icon">ZIP</span><strong>Прикрепить ZIP-архив</strong><small id="solutionZipName">до 25 МБ · исходники, макеты или готовый проект</small></label><p class="solution-delivery-note">Нужно добавить ссылку или ZIP-архив. ZIP сохраняется локально в файловом хранилище браузера и доступен для скачивания на этом устройстве.</p><label class="form-field"><span>Описание решения <small class="field-optional">необязательно</small></span><textarea id="solutionComment" placeholder="Расскажи, что ты сделал..."></textarea></label><div class="submission-submit-row"><button class="btn btn-primary btn-full" id="submissionSubmitButton" type="submit">Отправить результат</button><small class="submission-submit-status" id="submissionSubmitStatus" aria-live="polite"></small></div></form></div></div>
+<div class="toast-container" id="toastContainer"></div><script defer src="js/storage.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/notifications.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/chat.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/company.js"></script>
+  <script defer src="js/favorites.js"></script>
+  <script defer src="js/forms.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

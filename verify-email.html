@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Подтверждение почты — CrowdHub</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body data-page="verify-email">
+  <div class="liquid-orb auth-orb-one"></div><div class="liquid-orb auth-orb-two"></div>
+  <main class="auth-page verification-auth-page">
+    <a class="auth-logo" href="index.html"><span class="brand-icon brand-logo-image"><img alt="CrowdHub" src="logo.png"/></span><strong>CrowdHub</strong></a>
+    <section class="glass auth-card verification-card" id="verificationReady">
+      <div class="verification-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="m5 7 7 5 7-5"/></svg>
+      </div>
+      <span class="section-caption">ПОДТВЕРЖДЕНИЕ ПОЧТЫ</span>
+      <h1>Проверь почту</h1>
+      <p>Мы отправили шестизначный код на <strong id="verificationEmail">—</strong>.</p>
+
+      <form id="verifyEmailForm">
+        <label class="form-field verification-code-field"><span>Код из письма</span><input id="verificationCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="000000" required/></label>
+        <button class="btn btn-primary btn-full" id="verifyEmailSubmit" type="submit" disabled>Подтвердить email</button>
+      </form>
+      <div class="verification-actions"><button class="text-button" id="resendVerification" type="button">Отправить код ещё раз</button><a href="login.html">Вернуться ко входу</a></div>
+    </section>
+
+    <section class="glass auth-card verification-card" id="verificationMissing" hidden>
+      <span class="section-caption">ПОДТВЕРЖДЕНИЕ ПОЧТЫ</span><h1>Нет ожидающего аккаунта</h1><p>Вернись к регистрации или войди в уже созданный аккаунт.</p>
+      <div class="verification-missing-actions"><a class="btn btn-primary" href="register.html">Регистрация</a><a class="btn btn-secondary" href="login.html">Войти</a></div>
+    </section>
+  </main>
+  <div class="toast-container" id="toastContainer"></div>
+  <script defer src="js/storage.js"></script><script defer src="js/i18n.js"></script><script defer src="js/navigation.js"></script><script defer src="js/notifications.js"></script><script defer src="js/components.js"></script><script defer src="js/chat.js"></script><script defer src="js/tasks.js"></script><script defer src="js/auth.js"></script><script defer src="js/profile.js"></script><script defer src="js/company.js"></script><script defer src="js/favorites.js"></script><script defer src="js/forms.js"></script><script defer src="app.js"></script>
+</body>
+</html>

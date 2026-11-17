@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Регистрация — CrowdHub</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body data-page="register">
+  <div class="liquid-orb auth-orb-one"></div><div class="liquid-orb auth-orb-two"></div>
+  <main class="auth-page register-auth-page">
+    <a class="auth-logo" href="index.html"><span class="brand-icon brand-logo-image"><img alt="CrowdHub" src="logo.png"/></span><strong>CrowdHub</strong></a>
+    <section class="glass auth-card auth-card-wide register-card">
+      <div class="register-topline">
+        <div><span class="section-caption">СОЗДАНИЕ АККАУНТА</span><h1>Создай профиль</h1></div>
+        <div class="register-step-label"><span id="registerStepCurrent">1</span> / <span id="registerStepTotal">4</span></div>
+      </div>
+      <div class="register-progress"><i id="registerProgressBar"></i></div>
+      <form id="registerForm">
+        <section class="register-step active" data-register-step="1">
+          <h2>Кем ты будешь на CrowdHub?</h2>
+          <p class="register-step-copy">Роль определяет кабинет и сценарии работы. Её можно будет изменить через поддержку.</p>
+          <div class="role-selector role-selector-large">
+            <label><input checked name="role" type="radio" value="performer"/><span class="glass role-option"><span class="role-icon">⌘</span><strong>Исполнитель</strong><small>Решай задачи, собирай портфолио, рейтинг и опыт.</small></span></label>
+            <label><input name="role" type="radio" value="company"/><span class="glass role-option"><span class="role-icon">▣</span><strong>Компания</strong><small>Публикуй задачи, принимай решения и формируй команду.</small></span></label>
+          </div>
+          <div class="glass role-benefits" id="roleBenefits"><span class="section-caption">ЧТО ТЫ ПОЛУЧИШЬ</span><div id="roleBenefitsContent"></div></div>
+        </section>
+
+        <section class="register-step" data-register-step="2">
+          <h2>Основные данные</h2>
+          <p class="register-step-copy">Эти данные будут видны в профиле и в твоих откликах.</p>
+          <div class="two-fields"><label class="form-field"><span>Имя / компания</span><input id="registerName" required type="text"/></label><label class="form-field"><span>Ссылка ВК</span><input id="registerContact" placeholder="https://vk.com/id123456" required type="url" autocomplete="url"/></label></div>
+          <label class="form-field"><span>Email</span><input id="registerEmail" required type="email"/></label>
+          <label class="form-field"><span>Пароль</span><input id="registerPassword" minlength="4" required type="password"/></label>
+        </section>
+
+        <section class="register-step" data-register-step="3">
+          <div data-performer-registration>
+            <h2>Навыки</h2>
+            <p class="register-step-copy">Выбери минимум 2 навыка. По ним CrowdHub сможет лучше подбирать задачи.</p>
+            <div class="skill-picker">
+              <label class="form-field"><span>Добавить из списка</span><select id="registerSkillSelect"><option value="">Выбрать навык…</option><option>HTML</option><option>CSS</option><option>JavaScript</option><option>TypeScript</option><option>React</option><option>Vue</option><option>Node.js</option><option>Python</option><option>Java</option><option>SQL</option><option>Figma</option><option>UI</option><option>UX</option><option>Research</option><option>Analytics</option><option>Marketing</option><option>Copywriting</option><option>Telegram Bot</option></select></label>
+              <button class="btn btn-secondary skill-add-button" id="registerAddSkill" type="button">Добавить</button>
+            </div>
+            <div class="selected-skills" id="registerSelectedSkills"></div>
+            <div class="custom-skill-row"><input id="registerCustomSkill" placeholder="Или введи свой навык" type="text"/><button class="btn btn-secondary" id="registerAddCustomSkill" type="button">Добавить свой</button></div>
+          </div>
+          <div data-company-registration hidden>
+            <h2>О компании</h2>
+            <p class="register-step-copy">Эта информация помогает исполнителям понимать, с кем они работают.</p>
+            <div class="two-fields"><label class="form-field"><span>Сфера</span><select id="registerIndustry"><option>IT / Software</option><option>Education</option><option>E-commerce</option><option>Marketing</option><option>Design</option><option>Fintech</option><option>Другое</option></select></label><label class="form-field"><span>Размер команды</span><select id="registerCompanySize"><option>1–5</option><option>6–20</option><option>21–50</option><option>51–200</option><option>200+</option></select></label></div>
+            <label class="form-field"><span>Сайт компании</span><input id="registerWebsite" placeholder="https://example.com" type="url"/></label>
+          </div>
+        </section>
+
+        <section class="register-step" data-register-step="4">
+          <div data-performer-registration>
+            <h2>Последние штрихи</h2>
+            <p class="register-step-copy">Это поможет заказчикам узнать о твоих навыках и специализации.</p>
+            <label class="form-field"><span>Коротко о себе</span><textarea id="registerBio" placeholder="Frontend-разработчик, люблю интерфейсы и реальные продуктовые задачи."></textarea></label>
+            <label class="form-field"><span>Портфолио</span><input id="registerPortfolio" placeholder="https://github.com/username" type="url"/></label>
+          </div>
+          <div data-company-registration hidden>
+            <h2>Профиль работодателя готов</h2>
+            <p class="register-step-copy">После регистрации ты попадёшь в кабинет компании и сможешь создать первую задачу.</p>
+            <label class="form-field"><span>Описание компании</span><textarea id="registerCompanyBio" placeholder="Чем занимается команда и какие специалисты вам интересны?"></textarea></label>
+          </div>
+        </section>
+
+        <div class="register-actions"><button class="btn btn-secondary" id="registerPrev" type="button" hidden>Назад</button><button class="btn btn-primary register-next" id="registerNext" type="button">Продолжить</button></div>
+      </form>
+      <p class="auth-switch">Уже зарегистрирован? <a href="login.html">Войти</a></p>
+    </section>
+  </main>
+  <div class="toast-container" id="toastContainer"></div><script defer src="js/storage.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/notifications.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/chat.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/profile.js"></script>
+  <script defer src="js/company.js"></script>
+  <script defer src="js/favorites.js"></script>
+  <script defer src="js/forms.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
